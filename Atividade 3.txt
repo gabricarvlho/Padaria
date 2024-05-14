@@ -1,0 +1,8 @@
+Todas as produções, funcionarios especificos e um insumo especifico
+
+
+SELECT p.*, f.Nome AS NomeFuncionario, i.Tipo AS TipoInsumo
+FROM producao p
+JOIN funcionario f ON p.FuncionarioID = f.FuncionarioID
+JOIN insumo i ON p.InsumoID = i.InsumoID
+WHERE f.Nome = 'Nome do Funcionário' AND i.Tipo = 'Tipo do Insumo';
